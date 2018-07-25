@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="20dp"
+              android:orientation="vertical">
+    <ImageView android:id="@+id/iv"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+             />
+    <TextView android:id="@+id/tv"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="开启任务后，请退出当前界面，并使用AS进行GC，观察是否能够回收activity"/>
+    <Button android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开启一个耗时30秒的异步任务(传统handler)"/>
+    <Button android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开启一个耗时30秒的异步任务(静态内部handler)"/>
+    <Button android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开启一个耗时30秒的异步任务(静态内部handler+静态Thread)"/>
+    <Button android:id="@+id/btn4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开启一个耗时30秒的异步任务(传统handler+静态Thread)"/>
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+    <ImageView android:id="@+id/iv"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+    />
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/stroke_bg"
+        android:fadeScrollbars="false"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:text="任务结果显示"
+        android:textSize="15sp"/>
+    <RadioGroup android:id="@+id/rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+        <RadioButton android:id="@+id/rb1"
+                     style="@style/RbStyle"
+                     android:checked="true"
+                     android:text="测试项1"/>
+        <Space android:layout_width="0dp"
+               android:layout_height="0dp"
+               android:layout_weight="1"/>
+        <RadioButton android:id="@+id/rb2"
+                     style="@style/RbStyle"
+                     android:text="测试项2"/>
+    </RadioGroup>
+    <LinearLayout android:id="@+id/lin1"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+        <Button android:id="@+id/btn_add"
+                style="@style/BtnStyle"
+                android:background="@color/task_color_1"
+                android:text="添加一个任务（耗时1s）"/>
+        <Button android:id="@+id/btn_add_most"
+                style="@style/BtnStyle"
+                android:background="@color/task_color_2"
+                android:text="添加10个任务（每个任务耗时0.5s）"/>
+        <Button android:id="@+id/btn_add_count"
+                style="@style/BtnStyle"
+                android:background="@color/task_color_3"
+                android:text="添加倒计时任务（5s内每隔1s执行一次）"/>
+        <Button android:id="@+id/btn_add_recycle"
+                style="@style/BtnStyle"
+                android:background="@color/task_color_4"
+                android:text="添加一个循环任务（循环3次）"/>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/lin2"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:visibility="gone">
+        <Button android:id="@+id/btn_add_bind"
+                style="@style/BtnStyle"
+                android:text="绑定生命周期的任务（任务耗时30秒，不随退出中断）"
+                android:textColor="@color/task_color_2"/>
+        <Button android:id="@+id/btn_add_bind2"
+                style="@style/BtnStyle"
+                android:text="绑定生命周期的任务（任务耗时30秒，退出后中断任务）"
+                android:textColor="@color/task_color_2"/>
+        <Button android:id="@+id/btn_add_ui"
+                style="@style/BtnStyle"
+                android:text="绑定生命周期的任务（无限循环，随activity结束而结束）"
+                android:textColor="@color/task_color_2"/>
+    </LinearLayout>
+</LinearLayout>
