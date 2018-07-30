@@ -67,6 +67,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             public void run (Emitter emitter) throws Exception {
                                 super.run(emitter);
                                 Thread.sleep(1000);
+                                emitter.next("任务完成");
+                            }
+
+                            @Override
+                            public void onNext (Object object) {
+                                super.onNext(object);
+                               toast((String) object);
                             }
 
                             @Override
